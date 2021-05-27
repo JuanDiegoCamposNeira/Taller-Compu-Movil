@@ -90,7 +90,7 @@ public class SignupActivity extends AppCompatActivity {
             ActivityCompat.requestPermissions(this, cameraPermission, cameraPermissionCode);
         }
         //-----------------------------------
-        //        Take picture
+        //          Take picture
         //-----------------------------------
         takePictureBtn = (Button) findViewById(R.id.signup_btn_agregarFoto);
         takePictureBtn.setOnClickListener( ( view ) -> {
@@ -98,7 +98,7 @@ public class SignupActivity extends AppCompatActivity {
         });
 
         //-----------------------------------
-        //       Register user
+        //          Register user
         //-----------------------------------
         // Assign fields
         firstName = (EditText) findViewById(R.id.signup_nombre);
@@ -122,13 +122,13 @@ public class SignupActivity extends AppCompatActivity {
             registerUser();
 
             // Start main activity
-            finish(); 
+            finish();
             startActivity(new Intent(SignupActivity.this, MainActivity.class));
         });
     }
 
     //-----------------------------------
-    //       Methods
+    //            Methods
     //-----------------------------------
     // Function to register a user to firebase
     private void registerUser() {
@@ -147,7 +147,7 @@ public class SignupActivity extends AppCompatActivity {
                             userFields.put("Id", id.getText().toString());
                             userFields.put("Latitud", latitude.getText().toString());
                             userFields.put("Longitud", longitude.getText().toString());
-                            userFields.put("Dispoible", "true");
+                            userFields.put("Disponible", "false");
 
                             currentUserId = userAuth.getCurrentUser().getUid();
 

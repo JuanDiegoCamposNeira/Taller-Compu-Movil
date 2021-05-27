@@ -60,8 +60,8 @@ public class LoginActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
-                                    startActivity( new Intent(LoginActivity.this, MainActivity.class) );
                                     finish();
+                                    startActivity( new Intent(LoginActivity.this, MainActivity.class) );
                                 } else {
                                     Toast.makeText(LoginActivity.this, "Ocurrió un error en la autenticaión del usuario", Toast.LENGTH_SHORT).show();
                                 }
