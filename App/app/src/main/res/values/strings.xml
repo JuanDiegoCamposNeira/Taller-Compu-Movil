@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Taller2</string>
     <string name="title_activity_main">Map</string>
+    <string name="title_activity_single_person_location">Map</string>
 </resources>

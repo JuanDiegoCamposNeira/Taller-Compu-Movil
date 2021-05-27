@@ -82,6 +82,8 @@ public class ShowUsersActivity extends AppCompatActivity {
         protected String idNumber;
         protected double latitude;
         protected double longitude;
+
         // Constructor(s)
+
     }
 }
