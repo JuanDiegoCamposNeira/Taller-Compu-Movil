@@ -62,7 +62,7 @@ public class ShowUsersActivity extends AppCompatActivity {
         databaseReference = FirebaseDatabase.getInstance().getReference("Users");
         storageReference = FirebaseStorage.getInstance().getReference("Users");
 
-        // Read all active users from DB
+        // Read all active users from DB and asign a listener to the users
         ValueEventListener usersListener = new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
