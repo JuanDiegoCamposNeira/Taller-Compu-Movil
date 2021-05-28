@@ -90,6 +90,13 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         currentUserId = userAuth.getUid();
         database = FirebaseDatabase.getInstance().getReference("Users").child(currentUserId);
 
+
+        // Create listener for location in users ...
+
+
+        // Create notification
+
+
         // Request permissions to access location
         if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             getLastKnownLocation();
