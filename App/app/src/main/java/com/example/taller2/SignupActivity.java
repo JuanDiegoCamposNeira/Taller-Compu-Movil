@@ -139,6 +139,9 @@ public class SignupActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+
+                            currentUserId = userAuth.getCurrentUser().getUid();
+
                             Map<String, String> userFields = new HashMap<>();
                             userFields.put("Nombres", firstName.getText().toString());
                             userFields.put("Apellidos", secondName.getText().toString());
@@ -148,8 +151,7 @@ public class SignupActivity extends AppCompatActivity {
                             userFields.put("Latitud", latitude.getText().toString());
                             userFields.put("Longitud", longitude.getText().toString());
                             userFields.put("Disponible", "false");
-
-                            currentUserId = userAuth.getCurrentUser().getUid();
+                            userFields.put("uid", currentUserId);
 
                             // Save user's info in Firebase Database
                             database.child("Users").child(currentUserId).setValue(userFields)

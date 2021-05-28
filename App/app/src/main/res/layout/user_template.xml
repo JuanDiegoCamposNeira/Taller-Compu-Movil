@@ -20,7 +20,7 @@
         android:layout_height="wrap_content" />
 
     <LinearLayout
-        android:layout_width="152dp"
+        android:layout_width="145dp"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
@@ -46,7 +46,7 @@
         android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/user_template_show_location"
+        android:id="@+id/user_template_show_location_btn"
         android:layout_width="97dp"
         android:layout_height="wrap_content"
         android:text="Ver localización"
